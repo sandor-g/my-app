@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, Button, Separator } from '@base-ui-components/react';
+import { Input, Separator } from '@base-ui-components/react';
 import type { AppState } from '../types';
 
 interface SidebarProps {
@@ -8,18 +8,7 @@ interface SidebarProps {
   onTemplateSelect: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ state, onUpdate, onTemplateSelect }) => {
-  const updateBrand = (brand: AppState['brand']) => {
-    onUpdate({ brand });
-  };
-
-  const updateProject = (project: AppState['project']) => {
-    onUpdate({ project });
-  };
-
-  const updateExport = (export_: AppState['export']) => {
-    onUpdate({ export: export_ });
-  };
+const Sidebar: React.FC<SidebarProps> = ({ onTemplateSelect }) => {
 
   return (
     <aside className="sidebar bg-white border-r border-gray-200 flex flex-col h-full overflow-hidden">
@@ -84,12 +73,12 @@ const Sidebar: React.FC<SidebarProps> = ({ state, onUpdate, onTemplateSelect }) 
 
       {/* Preview Button */}
       <div className="p-6">
-        <Button 
+        <button 
           onClick={onTemplateSelect}
           className="w-full px-4 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
         >
           Preview
-        </Button>
+        </button>
       </div>
     </aside>
   );

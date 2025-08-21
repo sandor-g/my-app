@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Toolbar, ToggleGroup } from '@base-ui-components/react';
+import { Toolbar } from '@base-ui-components/react';
 import type { AppState, SlideElement, SlideContent } from '../types';
 
 interface PreviewPaneProps {
@@ -104,7 +104,6 @@ const PreviewPane: React.FC<PreviewPaneProps> = ({ state }) => {
                   slide={state.project.slides[currentSlide]} 
                   brand={state.brand}
                   slideContent={state.project.slideContents?.[currentSlide]}
-                  artboardDimensions={artboardDimensions}
                 />
               )}
             </div>
@@ -131,10 +130,9 @@ interface SlideRendererProps {
   slide: SlideElement;
   brand: any;
   slideContent: SlideContent | undefined;
-  artboardDimensions: { width: number; height: number };
 }
 
-const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, brand, slideContent, artboardDimensions }) => {
+const SlideRenderer: React.FC<SlideRendererProps> = ({ slide, brand, slideContent }) => {
   const getTokenColor = (token: string) => {
     return brand.colorMapping[token as keyof typeof brand.colorMapping] || '#000000';
   };

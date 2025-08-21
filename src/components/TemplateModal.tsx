@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Separator } from '@base-ui-components/react';
+import { Separator } from '@base-ui-components/react';
 import type { Template } from '../types';
 
 interface TemplateModalProps {
@@ -41,12 +41,12 @@ const TemplateModal: React.FC<TemplateModalProps> = ({ templates, onSelect, onCl
         <div className="modal-header p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-primary">Select Template</h2>
-            <Button
+            <button
               onClick={onClose}
               className="text-gray-400 hover:text-gray-600 text-3xl font-light p-0 bg-transparent border-none"
             >
               &times;
-            </Button>
+            </button>
           </div>
         </div>
 
