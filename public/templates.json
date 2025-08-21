@@ -1,0 +1,249 @@
+[
+  {
+    "id": "hero",
+    "name": "Hero",
+    "description": "Bold headline with supporting text and CTA",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["1:1", "16:9", "9:16", "4:5"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 10, "y": 20, "w": 80, "h": 25 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 48, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "subheadline",
+        "rect": { "x": 15, "y": 50, "w": 70, "h": 20 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 15, "radius": 0 },
+        "textDefaults": { "fontSize": 24, "fontWeight": 400 },
+        "locked": true,
+        "toggleKey": "subheadline",
+        "visible": true
+      },
+      {
+        "type": "cta",
+        "rect": { "x": 35, "y": 75, "w": 30, "h": 12 },
+        "style": { "tokenBinding": "accent", "align": "center", "padding": 15, "radius": 8 },
+        "textDefaults": { "fontSize": 18, "fontWeight": 600 },
+        "locked": true,
+        "toggleKey": "cta",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "split",
+    "name": "Split",
+    "description": "Two-column layout with text and visual elements",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["16:9", "1:1"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 5, "y": 15, "w": 45, "h": 20 },
+        "style": { "tokenBinding": "text", "align": "left", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 36, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "body",
+        "rect": { "x": 5, "y": 40, "w": 45, "h": 35 },
+        "style": { "tokenBinding": "text", "align": "left", "padding": 15, "radius": 0 },
+        "textDefaults": { "fontSize": 16, "fontWeight": 400 },
+        "locked": true,
+        "toggleKey": "body",
+        "visible": true
+      },
+      {
+        "type": "shape",
+        "rect": { "x": 55, "y": 20, "w": 40, "h": 60 },
+        "style": { "tokenBinding": "accent", "align": "center", "padding": 0, "radius": 12 },
+        "locked": true,
+        "toggleKey": "shape",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "big-quote",
+    "name": "Big Quote",
+    "description": "Prominent quote with attribution",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["1:1", "16:9", "9:16"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "body",
+        "rect": { "x": 10, "y": 25, "w": 80, "h": 40 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 25, "radius": 0 },
+        "textDefaults": { "fontSize": 32, "fontWeight": 500, "fontStyle": "italic" },
+        "locked": true,
+        "toggleKey": "quote",
+        "visible": true
+      },
+      {
+        "type": "subheadline",
+        "rect": { "x": 60, "y": 70, "w": 30, "h": 15 },
+        "style": { "tokenBinding": "accent", "align": "right", "padding": 10, "radius": 0 },
+        "textDefaults": { "fontSize": 18, "fontWeight": 600 },
+        "locked": true,
+        "toggleKey": "attribution",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "checklist",
+    "name": "Checklist",
+    "description": "Bullet points with checkmarks",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["1:1", "16:9", "9:16"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 10, "y": 15, "w": 80, "h": 20 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 36, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "bullets",
+        "rect": { "x": 20, "y": 40, "w": 60, "h": 40 },
+        "style": { "tokenBinding": "text", "align": "left", "padding": 15, "radius": 0 },
+        "textDefaults": { "fontSize": 20, "fontWeight": 500 },
+        "locked": true,
+        "toggleKey": "bullets",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "stats",
+    "name": "Stats",
+    "description": "Numbers and statistics display",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["1:1", "16:9"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 10, "y": 15, "w": 80, "h": 20 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 36, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "body",
+        "rect": { "x": 15, "y": 40, "w": 70, "h": 40 },
+        "style": { "tokenBinding": "accent", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 48, "fontWeight": 800 },
+        "locked": true,
+        "toggleKey": "stats",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "stepper",
+    "name": "Stepper",
+    "description": "Step-by-step process visualization",
+    "defaultSlideCount": 3,
+    "supportedAspects": ["16:9", "1:1"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 10, "y": 15, "w": 80, "h": 20 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 36, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "progress",
+        "rect": { "x": 20, "y": 45, "w": 60, "h": 8 },
+        "style": { "tokenBinding": "accent", "align": "center", "padding": 0, "radius": 4 },
+        "locked": true,
+        "toggleKey": "progress",
+        "visible": true
+      },
+      {
+        "type": "body",
+        "rect": { "x": 15, "y": 60, "w": 70, "h": 25 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 15, "radius": 0 },
+        "textDefaults": { "fontSize": 18, "fontWeight": 400 },
+        "locked": true,
+        "toggleKey": "step",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "before-after",
+    "name": "Before After",
+    "description": "Comparison layout with two sections",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["16:9", "1:1"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 10, "y": 10, "w": 80, "h": 15 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 15, "radius": 0 },
+        "textDefaults": { "fontSize": 28, "fontWeight": 700 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      },
+      {
+        "type": "shape",
+        "rect": { "x": 5, "y": 30, "w": 40, "h": 55 },
+        "style": { "tokenBinding": "bg", "align": "center", "padding": 0, "radius": 8 },
+        "locked": true,
+        "toggleKey": "before",
+        "visible": true
+      },
+      {
+        "type": "shape",
+        "rect": { "x": 55, "y": 30, "w": 40, "h": 55 },
+        "style": { "tokenBinding": "accent", "align": "center", "padding": 0, "radius": 8 },
+        "locked": true,
+        "toggleKey": "after",
+        "visible": true
+      }
+    ]
+  },
+  {
+    "id": "minimal",
+    "name": "Minimal",
+    "description": "Clean, simple design with essential elements",
+    "defaultSlideCount": 1,
+    "supportedAspects": ["1:1", "16:9", "9:16", "4:5"],
+    "tokens": ["bg", "text", "accent", "shape"],
+    "slides": [
+      {
+        "type": "headline",
+        "rect": { "x": 15, "y": 35, "w": 70, "h": 30 },
+        "style": { "tokenBinding": "text", "align": "center", "padding": 20, "radius": 0 },
+        "textDefaults": { "fontSize": 42, "fontWeight": 600 },
+        "locked": true,
+        "toggleKey": "headline",
+        "visible": true
+      }
+    ]
+  }
+]
