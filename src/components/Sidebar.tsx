@@ -21,48 +21,53 @@ const Sidebar: React.FC<SidebarProps> = ({ onTemplateSelect }) => {
       {/* Scrollable Content */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
         {/* Store Name Inputs using Base UI Field and Input */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           <Field.Root>
-            <Field.Label className="block text-sm font-medium text-gray-900 mb-2">
+            <Field.Label className="block text-sm font-semibold text-gray-900 mb-3">
               Store name
             </Field.Label>
             <Input
               type="text"
               placeholder="Jaded Pixel"
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
             />
           </Field.Root>
 
           <Field.Root>
-            <Field.Label className="block text-sm font-medium text-gray-900 mb-2">
+            <Field.Label className="block text-sm font-semibold text-gray-900 mb-3">
               Brand color
             </Field.Label>
-            <Input
-              type="text"
-              placeholder="#3B82F6"
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
+            <div className="flex items-center space-x-3">
+              <Input
+                type="text"
+                placeholder="#3B82F6"
+                className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
+              />
+              <div className="w-12 h-12 rounded-lg border-2 border-gray-200 bg-blue-500 flex items-center justify-center">
+                <span className="text-white text-xs font-bold">C</span>
+              </div>
+            </div>
           </Field.Root>
 
           <Field.Root>
-            <Field.Label className="block text-sm font-medium text-gray-900 mb-2">
+            <Field.Label className="block text-sm font-semibold text-gray-900 mb-3">
               Font family
             </Field.Label>
             <Input
               type="text"
               placeholder="Inter"
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
             />
           </Field.Root>
 
           <Field.Root>
-            <Field.Label className="block text-sm font-medium text-gray-900 mb-2">
+            <Field.Label className="block text-sm font-semibold text-gray-900 mb-3">
               Tagline
             </Field.Label>
             <Input
               type="text"
               placeholder="Your brand tagline"
-              className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 placeholder-gray-400"
             />
           </Field.Root>
         </div>
@@ -74,9 +79,9 @@ const Sidebar: React.FC<SidebarProps> = ({ onTemplateSelect }) => {
       <div className="p-6">
         <button 
           onClick={onTemplateSelect}
-          className="w-full px-4 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+          className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
         >
-          Preview
+          🎨 Preview Templates
         </button>
       </div>
     </aside>

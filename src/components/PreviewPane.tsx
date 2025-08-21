@@ -39,55 +39,55 @@ const PreviewPane: React.FC<PreviewPaneProps> = ({ state }) => {
   return (
     <main className="flex-1 flex flex-col bg-gray-50">
       {/* Header with Controls using Base UI Toolbar */}
-      <Toolbar.Root className="p-4 border-b border-gray-200 bg-white">
+      <Toolbar.Root className="p-4 border-b border-gray-200 bg-white shadow-sm">
         <Toolbar.Group className="flex items-center space-x-2">
           <Toolbar.Button
             onClick={handleZoomOut}
-            className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-sm"
             disabled={zoom <= 50}
             aria-label="Zoom out"
           >
-            -
+            <span className="text-lg font-bold">−</span>
           </Toolbar.Button>
           
-          <span className="text-sm font-medium text-gray-700 min-w-[60px] text-center">
+          <span className="text-sm font-medium text-gray-700 min-w-[70px] text-center bg-gray-100 px-3 py-2 rounded-lg">
             {zoom}%
           </span>
           
           <Toolbar.Button
             onClick={handleZoomIn}
-            className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-sm"
             disabled={zoom >= 200}
             aria-label="Zoom in"
           >
-            +
+            <span className="text-lg font-bold">+</span>
           </Toolbar.Button>
         </Toolbar.Group>
 
         {isCarousel && hasSlides && (
           <>
-            <Toolbar.Separator className="mx-4" />
-            <Toolbar.Group className="flex items-center space-x-2">
+            <Toolbar.Separator className="mx-6 h-8 w-px bg-gray-300" />
+            <Toolbar.Group className="flex items-center space-x-3">
               <Toolbar.Button
                 onClick={() => setCurrentSlide(prev => Math.max(prev - 1, 0))}
                 disabled={currentSlide === 0}
-                className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-sm"
                 aria-label="Previous slide"
               >
-                ‹
+                <span className="text-lg">‹</span>
               </Toolbar.Button>
               
-              <span className="text-sm text-gray-700">
+              <span className="text-sm font-medium text-gray-700 bg-gray-100 px-4 py-2 rounded-lg">
                 Slide {currentSlide + 1} of {state.project.slides.length}
               </span>
               
               <Toolbar.Button
                 onClick={() => setCurrentSlide(prev => Math.min(prev + 1, state.project.slides.length - 1))}
                 disabled={currentSlide === state.project.slides.length - 1}
-                className="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-sm"
                 aria-label="Next slide"
               >
-                ›
+                <span className="text-lg">›</span>
               </Toolbar.Button>
             </Toolbar.Group>
           </>
